@@ -1,5 +1,5 @@
 {
-	"name" : "gossi/composer-localdev-plugin",
+	"name" : "apihawk/composer-localdev-plugin",
 	"type" : "composer-plugin",
 	"description" : "Composer Plugin for local development",
 	"license" : "MIT",
