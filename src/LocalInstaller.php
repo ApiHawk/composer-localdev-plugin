@@ -55,7 +55,7 @@ class LocalInstaller implements InstallerInterface {
 	
 	private function ensureSymlink(PackageInterface $package) {
 		$installPath = $this->getDedicatedInstaller($package)->getInstallPath($package);
-		$originPath = $this->repo->getPath($package->getName());
+		$originPath = realpath($this->repo->getPath($package->getName()));
 		
 		// return if link is already well placed
 		if (is_link($originPath) && readlink($originPath) == $installPath) {
